@@ -60,8 +60,7 @@ body{
         <ul class="nav navbar-nav justify-content-end" style="margin-left:70%;" >
         <li class="nav-item"><a href=" http://localhost/php-project-mini-ecommerce/project/" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="http://localhost/php-project-mini-ecommerce/project/card.php" class="nav-link">card</a></li>
-                 <li class="nav-item"><a href=" http://localhost/php-project-mini-ecommerce/project/project.php" class="nav-link">View Products</a></li>
-
+             
                  
         </ul>
        </div>

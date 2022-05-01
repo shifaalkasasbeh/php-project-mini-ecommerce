@@ -31,6 +31,27 @@ padding: 15px;
     body{
       padding: 0px 0px 200px 0px;
     }
+
+    
+
+
+th img{
+width: 40%;
+
+} 
+h2,h3{
+
+  font-size: 15px !important;
+padding: auto;
+}
+
+th {
+  color:black;
+  font-size: 15px !important;
+}
+
+
+</style>
     </style>
   </head>
   <body>
@@ -45,8 +66,7 @@ padding: 15px;
         <ul class="nav navbar-nav justify-content-end" style="margin-left:70%;" >
           <li class="nav-item"><a href=" http://localhost/php-project-mini-ecommerce/project/" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="http://localhost/php-project-mini-ecommerce/project/card.php" class="nav-link">card</a></li>
-                 <li class="nav-item"><a href=" http://localhost/php-project-mini-ecommerce/project/project.php" class="nav-link">View Products</a></li>
-
+            
                  
         </ul>
        </div>
@@ -70,7 +90,7 @@ padding: 15px;
 </fieldset>
 </form>
 
-<form action="./project.php" method="post">
+<form action="../project/index.php" method="post">
 <button type ="submit" >all oroduct </button>
 </form>
 
@@ -103,6 +123,42 @@ $img_url = "https://m.media-amazon.com/images/I/4154HhMt46S.jpg  ";
 
 ?>
 
+
+
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">Product Image</th>
+    <th scope="col">Product Name </th>
+    <th scope="col">Product Describtion </th>
+    <th scope="col">Product Size</th>
+    <th scope="col">Product Price </th>
+  </tr>
+  </thead>
+<?php
+
+
+for ($i=0; $i < count($_SESSION['pro']); $i++) { 
+   $p =$_SESSION['pro'][$i]; 
+   echo ' 
+<div class="">
+
+
+<tr>
+<th scope="row"><img src= " '. $p[2] .'"class="grid-item" ></th>
+<td "class="grid-item"><h2>'.$p[0].'<h2></td>
+<td "class="grid-item"><h3 >'.$p[1].'<h3></td>
+<td "class="grid-item"><h3 >'.$p[3].'<h3></td>
+<td "class="grid-item"><h3 >'.$p[4].'<h3></td>
+
+</div>    
+ </tr>
+</tbody>
+'; 
+}?>
+</table>
+<br>
+<br>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
